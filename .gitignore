@@ -6,6 +6,7 @@ target/
 
 .gradle
 /build/
+/gradle/
 
 ### STS ###
 .apt_generated
@@ -25,4 +26,5 @@ target/
 
 ### VS Code ###
 .vscode/
+
 
