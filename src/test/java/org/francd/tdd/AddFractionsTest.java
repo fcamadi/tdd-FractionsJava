@@ -26,4 +26,11 @@ public class AddFractionsTest {
         Fraction num = new Fraction(0).plus(new Fraction(5));
         assertEquals(5,num.intValue());
     }
+
+    @Test
+    void nonnegative_nonzero_operands()  {
+
+        Fraction num = new Fraction(3).plus(new Fraction(4));
+        assertEquals(7,num.intValue());
+    }
 }
