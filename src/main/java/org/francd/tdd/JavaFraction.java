@@ -1,11 +1,35 @@
 package org.francd.tdd;
 
+
 public class JavaFraction {
 
-    public JavaFraction(int i) {
+    private Integer num;
+    private Integer den;
+
+    public JavaFraction(Integer num,Integer den) {
+        this.num = num;
+        this.den = den;
     }
 
-    public int add(int i) {
-        return 0;
+    public Integer getNum() {
+        return num;
     }
+
+    public Integer getDen() {
+        return den;
+    }
+
+
+
+    public JavaFraction add(JavaFraction other) {
+        return new JavaFraction(this.num+other.num,this.den+other.den);
+    }
+
+
+    public boolean compare(JavaFraction other) {
+        return this.num==other.num && this.den==other.den;
+    }
+
+
+
 }
