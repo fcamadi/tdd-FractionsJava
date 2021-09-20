@@ -9,7 +9,12 @@ public class Fraction {
     }
 
     public Fraction plus(Fraction that) {
-        return this;
+        if (that.integerValue > 0) {
+            return that;
+        }
+        else {
+            return this;
+        }
     }
 
     public int intValue() {

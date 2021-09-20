@@ -19,4 +19,11 @@ public class AddFractionsTest {
         Fraction num = new Fraction(3).plus(new Fraction(0));
         assertEquals(3,num.intValue());
     }
+
+    @Test
+    void zero_plus_nonzero()  {
+
+        Fraction num = new Fraction(0).plus(new Fraction(5));
+        assertEquals(5,num.intValue());
+    }
 }
