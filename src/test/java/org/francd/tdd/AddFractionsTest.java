@@ -37,7 +37,7 @@ public class AddFractionsTest {
     }
 
     @Test
-    void non_trivial_denominator() {
+    void non_trivial_but_common_denominator() {
         final Fraction sum =  new Fraction(1,5).plus((new Fraction(2,5)));
         assertEquals(3,sum.getNumerator());
         assertEquals(5,sum.getDenominator());
