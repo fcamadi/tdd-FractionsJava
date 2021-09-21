@@ -1,14 +1,14 @@
 package org.francd.tdd;
 
+import javax.swing.*;
+
 public class Fraction {
 
-    private final int denominator;
     private final int numerator;
+    private final int denominator;
 
-
-    public Fraction(int numerator) {
-        this.numerator = numerator;
-        this.denominator = 1;
+    public Fraction(int integerValue) {
+        this(integerValue,1);
     }
 
     public Fraction(int numerator, int denominator) {
