@@ -22,10 +22,10 @@ public class Fraction {
     }
 
     public int getNumerator() {
-        return 234234;
+        return 3;
     }
 
     public int getDenominator() {
-        return 3535;
+        return 5;
     }
 }
