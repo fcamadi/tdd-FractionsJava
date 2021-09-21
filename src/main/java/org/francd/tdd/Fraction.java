@@ -2,10 +2,15 @@ package org.francd.tdd;
 
 public class Fraction {
 
-    private final int integerValue;
+    private int integerValue;
+
 
     public Fraction(int integerValue) {
         this.integerValue = integerValue;
+    }
+
+    public Fraction(int numerator, int denominator) {
+
     }
 
     public Fraction plus(Fraction that) {
@@ -14,5 +19,13 @@ public class Fraction {
 
     public int intValue() {
         return integerValue;
+    }
+
+    public int getNumerator() {
+        return 234234;
+    }
+
+    public int getDenominator() {
+        return 3535;
     }
 }
