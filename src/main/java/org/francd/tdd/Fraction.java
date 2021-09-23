@@ -1,6 +1,7 @@
 package org.francd.tdd;
 
-import javax.swing.*;
+
+import java.util.Objects;
 
 public class Fraction {
 
@@ -30,5 +31,24 @@ public class Fraction {
 
     public int getDenominator() {
         return denominator;
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other instanceof Fraction) {
+            Fraction that = (Fraction)other;
+            return this.numerator==that.numerator && this.denominator== that.denominator;
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numerator, denominator);
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%d/%d",numerator,denominator);
     }
 }
