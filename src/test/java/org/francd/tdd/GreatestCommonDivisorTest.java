@@ -13,6 +13,12 @@ public class GreatestCommonDivisorTest {
     }
 
     private int gcd(int a, int b) {
-        return 0;
+        //taken from wikipedia (iterative version)
+        while (b!=0) {
+            int t = b;
+            b = a % t;
+            a = t;
+        }
+        return a;
     }
 }
