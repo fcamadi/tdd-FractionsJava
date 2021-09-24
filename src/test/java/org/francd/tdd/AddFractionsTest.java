@@ -43,7 +43,7 @@ public class AddFractionsTest {
     }
 
     @Test
-    void different_denominators() {
+    void different_denominators_no_reducing() {
         assertEquals(new Fraction(5,6), new Fraction(1,2).plus((new Fraction(1,3))));
     }
 }
