@@ -38,9 +38,12 @@ public class AddFractionsTest {
     @Test
     void non_trivial_but_common_denominator() {
         //assertEquals(3,sum.getNumerator());     First we add the new assertion.
-        //assertEquals(5,sum.getDenominator());   If the test still passses: remove the old ones (here I comment them out)
+        //assertEquals(5,sum.getDenominator());   If the test still passes: remove the old ones (here I comment them out)
         assertEquals(new Fraction(3,5), new Fraction(1,5).plus((new Fraction(2,5))));
     }
 
-
+    @Test
+    void different_denominators() {
+        assertEquals(new Fraction(5,6), new Fraction(1,2).plus((new Fraction(1,3))));
+    }
 }
