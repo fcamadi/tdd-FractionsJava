@@ -75,7 +75,6 @@ public class AddFractionsTest {
     }
 
     @Test
-    @Disabled("negative denominators still not treated correctly")
     void negative_everywhere() {
         assertEquals(new Fraction(1,2), new Fraction(-1,4).plus((new Fraction(-3,-4))));
     }
