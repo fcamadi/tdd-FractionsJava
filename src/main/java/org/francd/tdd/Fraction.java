@@ -16,6 +16,7 @@ public class Fraction {
 
     public Fraction(int numerator, int denominator) {
         final int signOfDenominator = denominator < 0 ? -1 : 1;
+        // CONTRACT: gcd never returns 0   <- except for gcd(0,0), which is 0!
         final int gcd = gcd(numerator,denominator) * signOfDenominator;
         this.numerator = numerator / gcd;
         this.denominator = denominator / gcd;

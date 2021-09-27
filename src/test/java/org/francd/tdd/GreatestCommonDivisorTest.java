@@ -43,6 +43,11 @@ public class GreatestCommonDivisorTest {
         assertEquals(4, gcd(24,-28));
     }
 
-
+    @Test
+    void zero() {
+        assertEquals(1, gcd(1,0));
+        assertEquals(5, gcd(0,5));
+        assertEquals(0, gcd(0,0));
+    }
 
 }
