@@ -1,5 +1,6 @@
 package org.francd.tdd;
 
+import static org.francd.tdd.NumberTheory.gcd;
 
 import org.junit.jupiter.api.Test;
 
@@ -43,13 +44,5 @@ public class GreatestCommonDivisorTest {
     }
 
 
-    private int gcd(int a, int b) {
-        //taken from wikipedia (iterative version)
-        while (b!=0) {
-            int t = b;
-            b = a % t;
-            a = t;
-        }
-        return Math.abs(a);
-    }
+
 }
