@@ -1,8 +1,6 @@
 package org.francd.tdd;
 
 
-import java.util.Objects;
-
 import static org.francd.tdd.NumberTheory.gcd;
 
 public class Fraction {
