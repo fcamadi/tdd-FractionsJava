@@ -15,4 +15,10 @@ public class ReduceFractionTest {
     void reduce_to_not_whole_number() {
         assertEquals(new Fraction(3,4),new Fraction(6,8));
     }
+
+    @Test
+    void reduce_to_whole_number() {
+        assertEquals(new Fraction(6),new Fraction(24,4));
+    }
+
 }
