@@ -1,5 +1,6 @@
 package org.francd.tdd;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -45,5 +46,37 @@ public class AddFractionsTest {
     @Test
     void different_denominators_no_reducing() {
         assertEquals(new Fraction(5,6), new Fraction(1,2).plus((new Fraction(1,3))));
+    }
+
+    @Test
+    void reduce_result_to_whole_number() {
+        assertEquals(new Fraction(1), new Fraction(1,3).plus((new Fraction(2,3))));
+    }
+
+    @Test
+    void one_denominator_is_multiple_of_the_other() {
+        assertEquals(new Fraction(11,8), new Fraction(3,4).plus((new Fraction(5,8))));
+    }
+
+    @Test
+    void common_factor_in_denominators() {
+        assertEquals(new Fraction(11,18), new Fraction(1,6).plus((new Fraction(4,9))));
+    }
+
+    @Test
+    void reduce_result_even_when_denominators_are_the_same() {
+        assertEquals(new Fraction(3,2), new Fraction(3,4).plus((new Fraction(3,4))));
+    }
+
+    @Test
+    void negative_fraction_and_reducing() {
+        assertEquals(new Fraction(1,2), new Fraction(-1,4).plus((new Fraction(3,4))));
+        assertEquals(new Fraction(-1,8), new Fraction(3,8).plus((new Fraction(-1,2))));
+    }
+
+    @Test
+    @Disabled("negative denominators still not treated correctly")
+    void negative_everywhere() {
+        assertEquals(new Fraction(1,2), new Fraction(-1,4).plus((new Fraction(-3,-4))));
     }
 }
